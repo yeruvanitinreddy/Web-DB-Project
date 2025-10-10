@@ -1,0 +1,18 @@
+1.Main Purpose and Problem Solved:
+The app’s primary function is to allow users to maintain their to-do list and live a more organized life.
+It's an easy Type and Forget To list. The Application addresses a user from forgetting critical tasks
+by allowing a digital centralized location to store, organize, track tasks.
+
+2.Intended User:
+Intended user Anyone wanting an uncomplicated way to follow or organise to-dos in their daily life,
+either personally or professionally. That may be students, professionals or anyone who wants to become better organized.
+3.Key Features and User Actions:
+The app will have minimal functionalities that will require user to interact with 2 main entities: 
+Users & Tasks (or items/notes, whatever you want to call them). Key user actions will include:
+•	User Registration and Login: Users will be able to create an account and log in to access their personalized task list.
+•	Create Task: Logged-in users can create a new task or note.
+•	Read/View Tasks: Users can view a list of all the tasks they have created.
+•	Update Task: Users can edit or update an existing task.
+•	Delete Task: Users can delete a task from their list.
+•	Navigation: A navigation bar will allow users to easily move between the register, login, and task creation pages.
+

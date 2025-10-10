@@ -1,0 +1,106 @@
+/*Font size and font family for the body*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+/*Flexbox for the navigation bar*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*Style for navigation links*/
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.8s ease;
+}
+
+/*Hover effect for navigation links*/
+nav a:hover {
+    color: #0056b3;
+}
+
+/*Style for the form container*/
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 40px auto;
+}
+
+/*Style for input fields*/
+form input[type="text"],
+form input[type="password"],
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*Style for submit buttons */
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/*Hover effect for submit buttons*/
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/*Style for labels*/
+form label {
+    display: block;
+    margin-bottom: 5 px;
+    font-weight: bold;
+}
+
+/*Style for the h1 heading on the post page*/
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+/*Login page spacing*/
+.form_group {
+    margin-bottom: 15px;
+}
+
+/* Styling for the flex box in post page*/
+.form_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.post-image {
+    width: auto;
+    height: 30px;
+}
+/*
+form input[type="text"] {
+    width: 300px;
+}*/
