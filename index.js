@@ -10,8 +10,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 const userRoutes = require('./server/routes/user');
-app.use('/api/user', userRoutes);
+const postRoutes = require('./server/routes/post');
+app.use('/user', userRoutes);
+app.use('/post', postRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}!`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server started on port ${process.env.PORT}!`);
 });
