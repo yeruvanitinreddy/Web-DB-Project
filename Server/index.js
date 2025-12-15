@@ -6,11 +6,11 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 // Routes
-const userRoutes = require('./server/routes/user');
-const postRoutes = require('./server/routes/post');
+const userRoutes = require('./routes/user');
+const postRoutes = require('./routes/post');
 app.use('/user', userRoutes);
 app.use('/post', postRoutes);
 
