@@ -1,6 +1,6 @@
 const pool = require('./db_connect');
 
-// GET all posts for a specific user
+//GET all posts for a specific user
 async function getPostsByUser(user_id) {
   const [rows] = await pool.query(
     'SELECT * FROM posts WHERE user_id = ? ORDER BY created_at DESC',
@@ -9,7 +9,7 @@ async function getPostsByUser(user_id) {
   return rows;
 }
 
-// CREATE a new post
+//CREATE a new post
 async function createPost(user_id, content) {
   const [result] = await pool.query(
     'INSERT INTO posts (user_id, content) VALUES (?, ?)',
@@ -18,7 +18,7 @@ async function createPost(user_id, content) {
   return result.insertId;
 }
 
-// UPDATE post content (optional)
+//UPDATE post content
 async function updatePost(post_id, content) {
   await pool.query(
     'UPDATE posts SET content = ? WHERE post_id = ?',
@@ -26,7 +26,7 @@ async function updatePost(post_id, content) {
   );
 }
 
-// ✅ UPDATE post completed status (for checkbox)
+//UPDATE post completed status (for checkbox)
 async function updatePostStatus(post_id, completed) {
   await pool.query(
     'UPDATE posts SET completed = ? WHERE post_id = ?',
@@ -34,7 +34,7 @@ async function updatePostStatus(post_id, completed) {
   );
 }
 
-// DELETE a post (optional)
+//DELETE a post
 async function deletePost(post_id) {
   await pool.query('DELETE FROM posts WHERE post_id = ?', [post_id]);
 }

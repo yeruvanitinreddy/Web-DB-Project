@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/post');
 
-// GET all posts for a specific user
+//GET all posts for a specific user
 router.get('/:user_id', async (req, res) => {
   try {
     const posts = await Post.getPostsByUser(req.params.user_id);
@@ -13,7 +13,7 @@ router.get('/:user_id', async (req, res) => {
   }
 });
 
-// CREATE a new post
+//CREATE a new post
 router.post('/', async (req, res) => {
   try {
     const { user_id, content } = req.body;
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// UPDATE post content (optional)
+//UPDATE post content (optional)
 router.put('/edit/:id', async (req, res) => {
   try {
     const { content } = req.body;
@@ -37,7 +37,7 @@ router.put('/edit/:id', async (req, res) => {
   }
 });
 
-// UPDATE post completed status (checkbox)
+//UPDATE post completed status (checkbox)
 router.put('/:id', async (req, res) => {
   try {
     const { completed } = req.body;
@@ -49,7 +49,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// DELETE a post (optional)
+//DELETE a post (optional)
 router.delete('/:id', async (req, res) => {
   try {
     await Post.deletePost(req.params.id);

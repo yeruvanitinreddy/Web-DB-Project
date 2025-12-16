@@ -1,6 +1,4 @@
-// =========================
-// REGISTER
-// =========================
+//REGISTER
 const registerForm = document.getElementById("registerForm");
 
 if (registerForm) {
@@ -23,18 +21,15 @@ if (registerForm) {
 
     const data = await res.json();
 
-    // Save user_id so they stay logged in
+    //Save user_id so they stay logged in
     localStorage.setItem("user_id", data.user_id);
 
-    // Redirect to second entity page
+    //Redirect to second entity page
     window.location.href = "post.html";
   });
 }
 
-
-// =========================
-// LOGIN
-// =========================
+//LOGIN
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -59,10 +54,10 @@ if (loginForm) {
       return;
     }
 
-    // Save user_id so they stay logged in
+    //Save user_id so they stay logged in
     localStorage.setItem("user_id", data.user_id);
 
-    // Redirect to second entity page
+    //Redirect to second entity page
     window.location.href = "post.html";
   });
 }

@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 
-// GET all users
+//GET all users
 router.get('/', async (req, res) => {
   const users = await User.getAllUsers();
   res.json(users);
 });
 
-// REGISTER user
+//REGISTER user
 router.post('/', async (req, res) => {
   const id = await User.createUser(
     req.body.firstname,
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
   res.json({ user_id: id });
 });
 
-// LOGIN user
+//LOGIN user
 router.post('/login', async (req, res) => {
   const user = await User.getUserByCredentials(
     req.body.username,
@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
   res.json({ user_id: user.user_id, username: user.username });
 });
 
-// UPDATE user
+//UPDATE user
 router.put('/:id', async (req, res) => {
   await User.updateUser(
     req.params.id,
@@ -47,7 +47,7 @@ router.put('/:id', async (req, res) => {
   res.sendStatus(200);
 });
 
-// DELETE user
+//DELETE user
 router.delete('/:id', async (req, res) => {
   await User.deleteUser(req.params.id);
   res.sendStatus(200);
